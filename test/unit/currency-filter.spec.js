@@ -15,7 +15,7 @@ describe('currency', function() {
 
     it('should do basic currency filtering', function() {
       expect(currency(0)).toEqual('$0.00');
-      expect(currency(-999)).toEqual('($999.00)');
+      expect(currency(-999)).toEqual('-$999.00');
       expect(currency(1234.5678, 'USD$')).toEqual('USD$1,234.57');
     });
 
@@ -51,6 +51,20 @@ describe('currency', function() {
     it('should test API', function() {
       expect(currency(1234.42, '€', true)).toEqual('1,234.42€');
       expect(currency(1234, '$', 0)).toEqual('$1,234');
+    });
+
+  });
+
+  describe('negative values', function() {
+
+    it('should be shown by a preceding dash by default', function() {      
+      expect(currency(-1234.42, 'USD$')).toEqual('-USD$1,234.42');
+      expect(currency(-1234.42)).toEqual('-$1,234.42');
+    });
+
+    it('should revert to using parentheses when a fourth argument is passed in', function() {
+      expect(currency(-1234.42, '€', 0, true, true)).toEqual('(1,234€)');
+      expect(currency(-1234.42, 'USD$', 2, false, true)).toEqual('(USD$1,234.42)');
     });
 
   });
