@@ -1,7 +1,7 @@
 {
-  "name": "angular-currency-filter",
-  "version": "1.0.2",
-  "description": "Extend angular's built in currency filter.",
+  "name": "angular-currency-filter-alt-negative",
+  "version": "0.0.1",
+  "description": "Alternative to Angular's built in currency filter which displays negative values with a preceding dash by default.",
   "main": "./src/currency-filter.js",
   "directories": {
     "test": "test"
@@ -23,16 +23,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zmetser/angular-currency-filter.git"
+    "url": "https://github.com/cpoliver/angular-currency-filter-alt-negative"
   },
   "keywords": [
     "angularjs",
     "currency",
-    "filter"
+    "filter",
+    "negative",
+    "alternative"
   ],
-  "author": "Oliver Kovacs <zee@thezee.hu>",
+  "author": "Charles Oliver <charles@cpoliver.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Zmetser/angular-currency-filter/issues"
+    "url": "https://github.com/cpoliver/angular-currency-filter-alt-negative/issues"
   }
 }

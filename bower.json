@@ -4,7 +4,7 @@
   "authors": [
     "Charles Oliver <charles@cpoliver.com>"
   ],
-  "description": "Alternative to angular's built in currency filter for showing negative values with a preceding dash by default.",
+  "description": "Alternative to Angular's built in currency filter which displays negative values with a preceding dash by default.",
   "main": "./src/currency-filter.js",
   "keywords": [
     "angularjs",
